@@ -1,0 +1,45 @@
+### Verbo GET – listar todos
+GET http://localhost:8000/funcionario/ HTTP/1.1
+
+### Verbo GET – listar um
+GET http://localhost:8000/funcionario/10 HTTP/1.1
+
+### Verbo POST – adicionar
+POST http://127.0.0.1:8000/funcionario/ HTTP/1.1
+content-type: application/json
+
+{
+    "nome" : "Lucino",
+    "cpf" : "902478319",
+    "telefone" : "10238924",
+    "senha" : "lucino",
+    "matricula" : "12345",
+    "grupo" : 1
+}
+
+### Verbo PUT – atualiza
+PUT http://127.0.0.1:8000/funcionario/2 HTTP/1.1
+content-type: application/json
+
+{
+    "nome" : "Lucino",
+    "cpf" : "100000000",
+    "telefone" : "9875497",
+    "senha" : "lucino",
+    "matricula" : "20000",
+    "grupo" : 2
+}
+
+### Verbo DELETE - excluir
+DELETE http://127.0.0.1:8000/funcionario/2 HTTP/1.1
+
+### Verbo GET – listar todos
+GET http://localhost:8000/funcionario/ HTTP/1.1
+x-token: abcBolinhasToken
+x-key: abcBolinhasKey
+### Verbo GET – listar todos
+curl -X 'GET' \
+'http://localhost:8000/funcionario/' \
+-H 'accept: application/json' \
+-H 'x-token: abcBolinhasToken' \
+-H 'x-key: abcBolinhasKey'
